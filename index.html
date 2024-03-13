@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <!-- Google fonts kumbh sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Normalize css labrary  -->
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <!-- main css file  -->
+    <link rel="stylesheet" href="./src/css/output.css">
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+  </head>
+
+  <body class="relative font-kumbh">
+    <!-- overlay -->
+    <div id="overlay" class="absolute left-0 top-0 bottom-0 right-[100%] z-[45] bg-neutral-verydarkblue opacity-75">
+
+    </div>
+    <!-- // overlay //-->
+    <!-- side bar menu -->
+    <aside id="aside"
+      class="absolute top-0 bottom-0 w-0 overflow-hidden bg-white z-50 transition-all duration-200 ease-in">
+      <img id="close" class="cursor-pointer w-5 mt-8 ml-7" src="./images/icon-close.svg" alt="close">
+      <nav>
+        <ul class="h-[300px] pt-11 flex flex-col justify-between font-bold pl-8">
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- // side bar menu //-->
+    <!-- cart menu  -->
+    <div id="cart"
+      class="absolute top-20 z-40 bg-neutral-white left-[50%] translate-x-[-50%] rounded-lg font-kumbh w-[80%] transform scale-0 transition-transform duration-200 origin-top-right h-[220px] md:w-[300px] md:left-[70%] shadow-2xl ">
+      <h2 class="py-3 px-6 font-bold">Cart</h2>
+      <hr class="border-neutral-grayishblue mb-3">
+
+      <div id="cart_content" class="py-3 px-6 ">
+        <p class="text-neutral-darkgrayishblue mx-3 text-sm w-full text-center">Your Cart Is Empty</p>
+      </div>
+
+    </div>
+    <!-- // cart menu // -->
+
+    <header id="header"
+      class="flex items-center justify-between p-5 md:px-0 bg-neutral-white transition-all duration-[0.3s] ease-in md:border-b-2 my-container">
+      <div class="flex items-center">
+        <img id="open" class="mr-4 cursor-pointer sm:hidden" src="./images/icon-menu.svg" alt="menu">
+        <img class="mr-5 md:mr-11" src="./images/logo.svg" alt="logo">
+
+        <!-- desktop navbar  -->
+        <ul class="hidden sm:flex justify-between w-[330px] md:w-[360px]">
+          <li class="active">Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+        <!--// desktop navbar // -->
+
+      </div>
+      <div class="flex items-center">
+        <div class="relative">
+          <span id="notification"
+            class="absolute top-[-12px] right-[-5px] bg-primary-orange text-neutral-white text-[11px] w-5 rounded-full h-4 flex items-center justify-center opacity-0"></span>
+          <img id="cart_shop" class=" cursor-pointer" src="./images/icon-cart.svg" alt="cart">
+        </div>
+        <img class="max-w-full w-7 ml-4 cursor-pointer md:w-9 md:ml-6" src="./images/image-avatar.png" alt="avatar">
+      </div>
+    </header>
+
+
+
+    <main class="my-container md:grid grid-cols-2 min-h-screen  md:mt-10 justify-center gap-4 md:p-14">
+      <section>
+        <div class="imgs relative h-[330px] w-full md:w-[350px] md:h-[350px] cursor-pointer">
+
+          <img class="w-full object-cover max-h-full absolute opacity-0" src="./images/image-product-1.jpg"
+            alt="product-1">
+          <img class="w-full object-cover max-h-full absolute opacity-0" src="./images/image-product-2.jpg"
+            alt="product-2">
+          <img class="w-full object-cover max-h-full absolute opacity-0" src="./images/image-product-3.jpg"
+            alt="product-3">
+          <img class="w-full object-cover max-h-full absolute opacity-0" src="./images/image-product-4.jpg"
+            alt="product-4">
+          <div>
+            <img id="next"
+              class="absolute top-[50%] translate-y-[-50%] right-2 z-10 bg-neutral-white p-3 rounded-full w-[35px] h-[35px] object-cover cursor-pointer md:opacity-0"
+              src="./images/icon-next.svg" alt="next">
+            <img id="previous"
+              class="absolute top-[50%] translate-y-[-50%] left-2 z-10 bg-neutral-white p-3 rounded-full w-[35px] h-[35px] object-cover cursor-pointer md:opacity-0"
+              src="./images/icon-previous.svg" alt="previous">
+          </div>
+
+        </div>
+        <div class="thumb_imgs hidden  md:grid grid-cols-4 mt-6 w-[345px] gap-5">
+          <img class="thumb_children active" src="./images/image-product-1-thumbnail.jpg" alt="product-1">
+          <img class="thumb_children" src="./images/image-product-2-thumbnail.jpg" alt="product-2">
+          <img class="thumb_children" src="./images/image-product-3-thumbnail.jpg" alt="product-3">
+          <img class="thumb_children" src="./images/image-product-4-thumbnail.jpg" alt="product-4">
+        </div>
+
+      </section>
+
+      <section class="p-5 mb-9">
+        <strong class="text-primary-orange uppercase font-medium ">Sneaker Company</strong>
+        <h1 class="text-3xl font-bold">Fall Limited Edition Sneakers</h1>
+        <p class="text-neutral-darkgrayishblue pt-3">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div class="price flex justify-between pt-4 items-center">
+          <div class="flex items-center">
+            <span class="price-amount font-kumbh font-bold text-2xl pr-3">$125.00</span>
+            <span class="discount bg-primary-paleorange font-medium text-primary-orange px-2 rounded-md">50%</span>
+          </div>
+          <span class="old-price line-through text-neutral-darkgrayishblue font-medium">$250.00</span>
+        </div>
+
+        <form action="" class="mt-4 md:flex items-center">
+          <div class="relative">
+            <input id="amount" type="number" readonly name="number-of-products" value="1"
+              class=" bg-neutral-lightgrayishblue font-bold text-center w-full p-3 mt-3 focus-within:outline-none md:mt-0">
+            <img id="minus" src="./images/icon-minus.svg" alt="minus_icon"
+              class="absolute top-[50%] md:top-[40%] mt-1 left-4 cursor-pointer">
+            <img id="plus" src="./images/icon-plus.svg" alt="plus_icon"
+              class="absolute top-[50%] md:top-[40%] right-4 cursor-pointer">
+          </div>
+          <button id="add" type="button" class="custom-btn md:mt-0"><img class="pr-2 w-7" src="./images/icon-cart.svg"
+              alt="cart">Add to
+            cart</button>
+        </form>
+      </section>
+
+
+    </main>
+
+    <!-- lightbox section  -->
+    <section id="light_box"
+      class="absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-60%] z-50 hidden">
+      <span id="close_box" class="text-white absolute right-[10px] top-[-35px] cursor-pointer font-kumbh font-bold">X</span>
+      <img id="light_box_img" src="" alt="product-1" class="w-[400px] mx-auto rounded-lg">
+
+      <img id="next_box"
+        class="absolute top-[35%] right-2 bg-neutral-white p-3 rounded-full w-[35px] h-[35px] object-cover cursor-pointer"
+        src="./images/icon-next.svg" alt="next">
+      <img id="previous_box"
+        class="absolute top-[35%] left-2 z-10 bg-neutral-white p-3 rounded-full w-[35px] h-[35px] object-cover cursor-pointer"
+        src="./images/icon-previous.svg" alt="previous">
+
+
+
+      <div id="thumb_light_box" class="grid grid-cols-4 gap-4 p-8 justify-center items-center">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="product-1">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="product-2">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="product-3">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="product-4">
+      </div>
+    </section>
+    <!-- // lightbox section // -->
+
+
+
+
+
+
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Ouss_Ach</a>.
+    </div>
+
+    <script src="./src/main.js"></script>
+  </body>
+
+</html>

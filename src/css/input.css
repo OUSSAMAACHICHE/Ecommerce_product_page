@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* Container styles  */ 
+@media  screen and (min-width: 768px) {
+	.my-container {
+		width: 750px;
+		margin-inline: auto;
+	}
+	.imgs img {
+		border-radius: 20px;
+	}
+}
+@media  screen and (min-width: 912px) {
+	.my-container {
+		width: 900px;
+		margin-inline: auto;
+	}
+}
+@media  screen and (min-width: 1200px) {
+	.my-container {
+		width: 1000px;
+		margin-inline: auto;
+	}
+}
+
+/* Light box active  */
+#light_box.active {
+	display: block
+}
+/* thumb imgs  */
+.thumb_children, #light_box div img {
+	@apply rounded-md cursor-pointer w-20;
+}
+.thumb_children:hover {
+	opacity: .5;
+}
+.thumb_children.active {
+	border: 2px solid;
+	@apply border-primary-orange;
+	opacity: .5;
+}
+#next.disabled, #previous.disabled {
+	cursor: no-drop;
+	opacity: .5;
+}
+.imgs img.active {
+	opacity: 1;
+}
+
+#cart.active {
+	@apply scale-100;
+}
+#overlay.active {
+	@apply right-0;
+}
+#aside.active {
+	@apply w-[70%];
+}
+
+nav li,ul li {
+	@apply cursor-pointer transition-all duration-200 relative;
+}
+
+#header ul li::before {
+	content: '';
+	position: absolute;
+	top: 45px;
+	left: 0;
+	width: 0px;
+	height: 4px;
+	@apply bg-primary-orange;
+	transition: width .3s ease-in;
+}
+#header ul li:hover::before {
+	width: 100%;
+}
+
+/* buttons style  */
+.custom-btn {
+	@apply bg-primary-orange w-full rounded-md text-neutral-white font-medium flex justify-center items-center p-3 mt-4 shadow-sm shadow-primary-orange hover:opacity-80;
+}
+
+/* Hide the arrows */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.scrolled {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	@apply bg-primary-orange fixed top-0 left-0 w-full z-40;
+
+}
+p {
+	font-size: 16px;
+}
+* {
+	box-sizing: border-box;
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
